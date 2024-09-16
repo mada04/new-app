@@ -7,14 +7,12 @@ export default function Hero() {
             <div className="flex-1 flex flex-col justify-center items-center gap-5">
                 <div>
                     <h4 className="text-center text-xl text-purple-700 text-opacity-75 font-bold">
-                        Hi and welcome to
+                        Bine ati venit in gradinita noastra
                     </h4>
-                    <h2 className="text-center text-purple-700 text-opacity-50 text-5xl font-bold underline tracking-wide">
-                        My portofolio Website
-                    </h2>
+
                 </div>
 
-                <p className="text-center text-purple-700 text-opacity-25 tracking-wider">I am your friendly neighbourhood osm developer</p>
+                <p className="text-center text-purple-700 text-opacity-25 tracking-wider">Gradinita noastra ofera sevicii de ingrijire si educare pentru copii cu varsta cuprinsa intre 1,8 ani si 6 ani.</p>
             </div>
             {/* <div className="flex-1">
                 <img src=

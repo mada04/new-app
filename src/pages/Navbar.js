@@ -13,12 +13,16 @@ export default function Navbar() {
                     </li>
                     <li><a className="text-sm sm:text-base px-2 lg:px-5 
                                       py-2 transition rounded hover:text-white 
-                                      hover:bg-purple-500" href="#skills">Skills</a>
+                                      hover:bg-purple-500" href="#skills">Cluburi copii</a>
                     </li>
                     <li><a className="text-sm sm:text-base px-2 lg:px-5 
                                       py-2 transition rounded hover:text-white 
-                                      hover:bg-purple-500" href="#projects">Projects</a>
+                                      hover:bg-purple-500" href="#afterSchools">After school</a>
                     </li>
+                    {/* <li><a className="text-sm sm:text-base px-2 lg:px-5 
+                                      py-2 transition rounded hover:text-white 
+                                      hover:bg-purple-500" href="#projects">Projects</a>
+                    </li> */}
                     <li><a className="text-sm sm:text-base px-2 lg:px-5 
                                       py-2 transition rounded hover:text-white 
                                       hover:bg-purple-500" href="#contact">Contact</a>
