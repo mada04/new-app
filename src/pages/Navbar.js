@@ -9,7 +9,7 @@ export default function Navbar() {
                 <ul className="flex gap-3 align-center p-1 flex-wrap">
                     <li><a className="text-sm sm:text-base px-2 lg:px-5 
                                       py-2 transition rounded hover:text-white 
-                                      hover:bg-purple-500" href="#about">About</a>
+                                      hover:bg-purple-500" href="#about">Despre</a>
                     </li>
                     <li><a className="text-sm sm:text-base px-2 lg:px-5 
                                       py-2 transition rounded hover:text-white 
@@ -27,7 +27,9 @@ export default function Navbar() {
                                       py-2 transition rounded hover:text-white 
                                       hover:bg-purple-500" href="#contact">Contact</a>
                     </li>
+                  
                 </ul>
+
             </div>
         </nav>
     )

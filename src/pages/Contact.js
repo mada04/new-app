@@ -7,21 +7,19 @@ export default function Contact() {
                 <a rel="noreferrer"
                     target="_blank"
                     className="text-center hover:underline"
-                    href=
-                    "https://instagram.com/geeks_for_geeks">
+                   >
                     Instagram:
                     <span className="font-bold">
-                        @geeks_for_geeks
+                        @gradi_for_children
                     </span>
                 </a>
                 <a rel="noreferrer"
-                   target="_blank"
-                   className="text-center hover:underline"
-                   href=
-"https://twitter.com/geeksforgeeks">
+                    target="_blank"
+                    className="text-center hover:underline"
+                   >
                     Twitter:
                     <span className="font-bold">
-                        @geeksforgeeks
+                        @gradi.gradi
                     </span>
                 </a>
             </div>

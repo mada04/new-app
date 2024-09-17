@@ -1,6 +1,14 @@
 import af from '../images/af.gif'
 export default function AfterSchool() {
     const ps = ["transport de la scoala", "masa de pranz", "efectuarea temelor", "activitati recreative", "gustare", "personal de specialitate"]
+    const pm = ["supravegherea",
+        "programul nutritional",
+        " efectuarea temelor complet si corect",
+        "invatarea activa",
+        "gandire libera",
+        "exercitii fizice zilnice",
+        "dezvoltarea abilitatilor in cadrul cluburilor"]
+
     return (
         <div id="afterSchools">
             <section
@@ -34,12 +42,28 @@ export default function AfterSchool() {
                 <div className="flex-1 flex flex-col justify-center
                                 items-center gap-5 px-6">
 
-<p>Program scurt</p>
+                    <p className='uppercase text-blue-600'>Program scurt</p>
+                    <ul className='list-disc'>
                     {ps && ps.map((s, i) => {
-                        return (<div key={i}
+                        return (<li key={i}
                         >{s}
-                        </div>)
+                        </li>)
                     })}
+                    </ul>
+                   
+                </div>
+                <div className="flex-1 flex flex-col justify-center
+                                items-center gap-5 px-6">
+
+                    <p className='uppercase text-blue-600'>Program Mediu</p>
+                    <ul className='list-disc list-outside'>
+                    {pm && pm.map((s, i) => {
+                        return (<li key={i}
+                        >{s}
+                        </li>)
+                    })}
+                    </ul>
+                  
                 </div>
             </section>
         </div>
