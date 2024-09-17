@@ -1,4 +1,5 @@
 import af from '../images/af.gif'
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 export default function AfterSchool() {
     const ps = ["transport de la scoala", "masa de pranz", "efectuarea temelor", "activitati recreative", "gustare", "personal de specialitate"]
     const pm = ["supravegherea",
@@ -42,7 +43,7 @@ export default function AfterSchool() {
                 <div className="flex-1 flex flex-col justify-center
                                 items-center gap-5 px-6">
 
-                    <p className='uppercase text-blue-600'>Program scurt</p>
+                    <p className='uppercase text-blue-600'>Program scurt <ExpandMoreIcon/></p>
                     <ul className='list-disc'>
                     {ps && ps.map((s, i) => {
                         return (<li key={i}
@@ -55,7 +56,7 @@ export default function AfterSchool() {
                 <div className="flex-1 flex flex-col justify-center
                                 items-center gap-5 px-6">
 
-                    <p className='uppercase text-blue-600'>Program Mediu</p>
+                    <p className='uppercase text-blue-600'>Program Mediu <ExpandMoreIcon/></p>
                     <ul className='list-disc list-outside'>
                     {pm && pm.map((s, i) => {
                         return (<li key={i}
