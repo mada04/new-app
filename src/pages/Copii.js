@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import { useFetch } from '../useFetch';
 import CopiiList from './CopiiList';
+import axios from 'axios';
 
 const Copii = () => {
     const [copii, setCopii] = useState([]);
@@ -22,12 +23,22 @@ const Copii = () => {
     useEffect(() => {
       getData();
     }, []);
-   
+
+    const deleteChild = (id) => {
+      axios.delete(`http://localhost:8000/copii/${id}`).then((response) => {
+        const newChild = copii.filter((copii) => copii.id !== id);
+        console.log(response)
+        setCopii(newChild);
+      }).catch(error => {
+        console.log(error)
+      });
+    }
+  
 
     return (
         <section>
      
-            {copii && <CopiiList copii={copii} />}
+            {copii && <CopiiList copii={copii} deleteChild={deleteChild} />}
         </section>
     );
 };

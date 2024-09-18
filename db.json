@@ -1,9 +1,24 @@
 {
-    "copii": [
-      { "id": "1", "nume": "Alexandru", "grupa": "Albinute" },
-      { "id": "2", "nume": "Vlad", "grupa": "Fluturasi" },
-      { "id": "3", "nume": "Maria", "grupa": "Buburuze" },
-      { "id": "4", "nume": "Alexandra", "grupa": "Fluturasi" }
-    ]
-   
-  }
+  "copii": [
+    {
+      "id": "4",
+      "nume": "Alexandra",
+      "grupa": "Fluturasi"
+    },
+    {
+      "id": "5",
+      "nume": "Vlad",
+      "grupa": "Fluturasi"
+    },
+    {
+      "id": "6",
+      "nume": "Miruna",
+      "grupa": "Fluturasi"
+    },
+    {
+      "id": "7",
+      "nume": "Sonia",
+      "grupa": "Fluturasi"
+    }
+  ]
+}

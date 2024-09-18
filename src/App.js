@@ -12,6 +12,8 @@ import { BrowserRouter as Router ,Routes,Route } from 'react-router-dom';
 import Grupe from './pages/Grupe';
 import ToDoList from './pages/ToDoList';
 import Copii from './pages/Copii';
+import EditCopil from './pages/EditCopil';
+import TestQuiz from './quiz/TestQuiz';
 function App() {
   return (
    <>
@@ -33,6 +35,8 @@ function App() {
       <Route path='/contact' element={<Contact/>}/>
       <Route path='/todo' element={<ToDoList/>}/>
       <Route path='/copiiList' element={<Copii/>}/>
+      <Route path='/editeaza' element={<EditCopil/>}/>
+      <Route path='/quizApp' element={<TestQuiz/>}/>
     </Routes>
     {/* <Footer/> */}
    {/* </Router> */}

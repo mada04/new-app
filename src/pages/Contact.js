@@ -61,7 +61,7 @@ function Contact() {
 
     return (
         <div className="App">
-            <h1>Form in React</h1>
+           
             <fieldset>
                 <form action="#" method="get">
                     <label for="firstname">
