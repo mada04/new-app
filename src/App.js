@@ -10,6 +10,8 @@ import Footer from './pages/Footer';
 import AfterSchool from './pages/AfterSchool';
 import { BrowserRouter as Router ,Routes,Route } from 'react-router-dom';
 import Grupe from './pages/Grupe';
+import ToDoList from './pages/ToDoList';
+import Copii from './pages/Copii';
 function App() {
   return (
    <>
@@ -24,13 +26,15 @@ function App() {
 
    {/* <Router> */}
     <Routes>
-      <Route path='/' element={<About/>}/>
+      <Route exact path='/' element={<About/>}/>
       <Route path='/skills' element={<Skills/>}/>
       <Route path='/afterSchools' element={<AfterSchool/>}/>
       <Route path='/grupe' element={<Grupe/>}/>
       <Route path='/contact' element={<Contact/>}/>
+      <Route path='/todo' element={<ToDoList/>}/>
+      <Route path='/copiiList' element={<Copii/>}/>
     </Routes>
-    <Footer/>
+    {/* <Footer/> */}
    {/* </Router> */}
    </>
   );
