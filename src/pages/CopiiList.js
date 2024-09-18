@@ -13,14 +13,14 @@ const CopiiList = ({ copii, deleteChild }) => {
             className="px-10 w-full flex gap-12 
         justify-center items-center align-center mt-40 
         mb-16 lg:mt-10 max-w-5xl mx-auto lg:gap-0 h-[80vh]">
-            <table className="table table-cover">
+            <table className="table table-hover">
                 <thead className="thead-light">
                     <tr>
-                        <th className="border border-slate-200 ..."></th>
-                        <th className="border border-slate-200 ...">Nume</th>
-                        <th className="border border-slate-200 ...">Grupa</th>
-                        <th className="border border-slate-200 ...">Editeaza</th>
-                        <th className="border border-slate-200 ...">Sterge</th>
+                        <th scope="col"></th>
+                        <th scope="col">Nume</th>
+                        <th scope="col">Grupa</th>
+                        <th scope="col">Editeaza</th>
+                        <th scope="col">Sterge</th>
 
                     </tr>
                 </thead>
@@ -28,11 +28,11 @@ const CopiiList = ({ copii, deleteChild }) => {
                     {copii && copii.map((c, i) => {
                         return (
                             <tr key={i}>
-                                <td className="border border-slate-200 ...">  <ChildCareIcon /></td>
-                                <td className="border border-slate-200 ...">{c.nume}</td>
-                                <td className="border border-slate-200 ...">{c.grupa}</td>
-                                <th className="border border-slate-200 ..."><EditIcon style={{ color: "#1ebf8f" }} /></th>
-                                <th className="border border-slate-200 ...">< DeleteIcon style={{ color: "#d46767" }} onClick={() => deleteChild(c.id)} /></th>
+                                <td>  <ChildCareIcon /></td>
+                                <td>{c.nume}</td>
+                                <td>{c.grupa}</td>
+                                <td><EditIcon style={{ color: "#1ebf8f" }} /></td>
+                                <td>< DeleteIcon style={{ color: "#d46767" }} onClick={() => deleteChild(c.id)} /></td>
                             </tr>
                         )
                     })}
