@@ -1,18 +1,15 @@
 import ChildCareIcon from '@mui/icons-material/ChildCare';
 import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
-import { useNavigate } from 'react-router-dom';
+
 const CopiiList = ({ copii, deleteChild }) => {
 
-    const navigate = useNavigate()
-    const pageEdit = () => {
-        navigate('/editeaza')
-    }
+
     return (
         <section id="listaCopii"
             className="px-10 w-full flex gap-12 
         justify-center items-center align-center mt-40 
-        mb-16 lg:mt-10 max-w-5xl mx-auto lg:gap-0 h-[80vh]">
+        mb-16 lg:mt-10 max-w-5xl mx-auto lg:gap-0 ">
             <table className="table table-hover">
                 <thead className="thead-light">
                     <tr>

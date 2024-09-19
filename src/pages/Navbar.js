@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export default function Navbar() {
     return (
         <nav className="w-full px-5 sm:px-10 py-0 shadow-xl 
-        backdrop-blur-lg fixed top-0 z-10">
+        fixed top-0 z-10">
             <div className="container flex flex-col lg:flex-row
                             gap-7 justify-between w-full 
                             items-center max-w-5xl mx-auto">
@@ -35,18 +35,18 @@ export default function Navbar() {
                                       py-2 transition rounded hover:text-white 
                                       hover:bg-purple-500" to="/contact">Contact</Link>
                     </li>
-                    <li><Link className="text-sm sm:text-base px-2 lg:px-5 
+                    {/* <li><Link className="text-sm sm:text-base px-2 lg:px-5 
                                       py-2 transition rounded hover:text-white 
                                       hover:bg-purple-500" to="/todo">Copii</Link>
-                    </li>
+                    </li> */}
                     <li><Link className="text-sm sm:text-base px-2 lg:px-5 
                                       py-2 transition rounded hover:text-white 
                                       hover:bg-purple-500" to="/copiiList">Lista Copii</Link>
                     </li>
-                    <li><Link className="text-sm sm:text-base px-2 lg:px-5 
+                    {/* <li><Link className="text-sm sm:text-base px-2 lg:px-5 
                                       py-2 transition rounded hover:text-white 
                                       hover:bg-purple-500" to="/quizApp">Test quiz</Link>
-                    </li>
+                    </li> */}
                 </ul>
 
             </div>
