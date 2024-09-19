@@ -43,10 +43,10 @@ export default function Navbar() {
                                       py-2 transition rounded hover:text-white 
                                       hover:bg-purple-500" to="/copiiList">Lista Copii</Link>
                     </li>
-                    {/* <li><Link className="text-sm sm:text-base px-2 lg:px-5 
+                    <li><Link className="text-sm sm:text-base px-2 lg:px-5 
                                       py-2 transition rounded hover:text-white 
                                       hover:bg-purple-500" to="/quizApp">Test quiz</Link>
-                    </li> */}
+                    </li>
                 </ul>
 
             </div>
