@@ -1,6 +1,6 @@
 
 import './App.css';
-import Navbar from './pages/Navbar';
+
 import Hero from './pages/Hero';
 import About from './pages/About';
 import Skills from './pages/Skills';
@@ -14,10 +14,11 @@ import ToDoList from './pages/ToDoList';
 import Copii from './pages/Copii';
 import EditCopil from './pages/AddChild';
 import TestQuiz from './quiz/TestQuiz';
+import NavbarApp from './pages/Navbar';
 function App() {
   return (
    <>
-   <Navbar/>
+   <NavbarApp/>
    {/* <Hero/>
    <About/>
    <Skills/>
@@ -36,7 +37,7 @@ function App() {
       {/* <Route path='/todo' element={<ToDoList/>}/> */}
       <Route path='/copiiList' element={<Copii/>}/>
       <Route path='/editeaza' element={<EditCopil/>}/>
-      {/* <Route path='/quizApp' element={<TestQuiz/>}/> */}
+      <Route path='/quizApp' element={<TestQuiz/>}/>
     </Routes>
     {/* <Footer/> */}
    {/* </Router> */}

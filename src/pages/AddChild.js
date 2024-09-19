@@ -4,13 +4,14 @@ import { useId, useState } from "react";
 import { useNavigate, useParams } from "react-router";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button, Form, Modal } from "react-bootstrap";
+import { v4 as uuidv4 } from 'uuid';
 const AddChild = (props) => {
 
 
   const [nume, setNume] = useState('');
   const [grupa, setGrupa] = useState('');
 
-  const { id } = useId();
+  const { id } = uuidv4();
   const navigate = useNavigate()
 
 
@@ -40,19 +41,19 @@ const AddChild = (props) => {
           return Promise.reject(error);
         }
 
-        else{
+        else {
           navigate('/copiiList')
           props.onHide();
           // this.setState({ postId: data.id })
         }
-      
+
       })
       .catch(error => {
         this.setState({ errorMessage: error.toString() });
         console.error('There was an error!', error);
       });
 
-    
+
 
   }
 
@@ -89,8 +90,15 @@ const AddChild = (props) => {
             </Form.Group>
             <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
               <Form.Label>Grupa</Form.Label>
-              <Form.Control type="text" placeholder="grupa" value={grupa}
-                onChange={(e) => setGrupa(e.target.value)} />
+              {/* <Form.Control type="text" placeholder="grupa" value={grupa}
+                onChange={(e) => setGrupa(e.target.value)} /> */}
+              <Form.Select aria-label="Default select example" onChange={(e) => setGrupa(e.target.value)}>
+                <option>Alegeti grupa</option>
+                <option value="Albinute">Albinute</option>
+                <option value="Omidute">Omidute</option>
+                <option value="Fluturasi">Fluturasi</option>
+                <option value="Buburuze">Buburuze</option>
+              </Form.Select>
             </Form.Group>
           </Form>
         </Modal.Body>

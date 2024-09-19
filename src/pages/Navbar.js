@@ -1,6 +1,7 @@
+
 import { Link } from "react-router-dom";
 
-export default function Navbar() {
+export default function NavbarApp() {
     return (
         <nav className="w-full px-5 sm:px-10 py-0 shadow-xl 
         fixed top-0 z-10">
@@ -51,5 +52,6 @@ export default function Navbar() {
 
             </div>
         </nav>
+      
     )
 }

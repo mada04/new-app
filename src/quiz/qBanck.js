@@ -1,33 +1,33 @@
 const qBank = [
     {
         id: 1,
-        question: "What is the capital of Haryana?",
-        options: ["Yamunanagar", "Panipat", "Gurgaon", "Chandigarh"],
-        answer: "Chandigarh",
+        question: "Ce crezi ca alege iepurasul din cos?",
+        options: ["mere", "pere", "prune", "struguri"],
+        answer: "struguri",
     },
     {
         id: 2,
-        question: "What is the capital of Punjab?",
-        options: ["Patiala", "Ludhiana", "Amritsar", "Chandigarh"],
-        answer: "Chandigarh",
+        question: "Unde se duce iepurasul ?",
+        options: ["gradinita", "cresa", "bunici", "parc"],
+        answer: "gradinita",
     },
     {
         id: 3,
-        question: "What is the capital of India?",
-        options: ["Delhi", "Mumbai", "Kolkata", "Chennai"],
-        answer: "Delhi"
+        question: "In ce grupa este iepurasul?",
+        options: ["Buburuze", "Albinute", "Omidute", "Fluturasi"],
+        answer: "Omidute"
     },
     {
         id: 4,
-        question: "What is the capital of Uttarakhad?",
-        options: ["Roorkee", "Haridwar", "Dehradun", "Nanital"],
-        answer: "Dehradun"
+        question: "Ce club crezi ca ii place cel mai mult lui iepuras?",
+        options: ["dans", "innot", "karate", "Tennis"],
+        answer: "Tennis"
     },
     {
         id: 5,
-        question: "What is capital of Uttar Pradesh?",
-        options: ["GB Nagar", "Lucknow", "Prayagraj", "Agra"],
-        answer: "Lucknow"
+        question: "Care crezi ca este culoarea preferata a iepurasului?",
+        options: ["roz", "galben", "albastru", "verde"],
+        answer: "roz"
     },
 ]
 

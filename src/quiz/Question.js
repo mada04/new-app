@@ -9,7 +9,7 @@ class Question extends Component{
 
         return(
             <div className="">
-                <h3>Question {question.id}</h3>
+                <h3>Intrebarea {question.id}</h3>
                 <h5 className="mt-2">{question.question}</h5>
                 <form onSubmit={onSubmit} className="mt-2 mb-2">
                     <Options

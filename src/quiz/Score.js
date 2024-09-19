@@ -7,8 +7,8 @@ class Score extends Component {
 
         return (
             <div>
-                <h2>Results</h2>
-                <h4>Your score: {score}</h4>
+                <h2>Rezultat</h2>
+                <h4>Scorul tau: {score}</h4>
             </div>
         );
     }

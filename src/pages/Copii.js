@@ -9,6 +9,15 @@ import { Button } from 'react-bootstrap';
 const Copii = () => {
   const [copii, setCopii] = useState([]);
 //  const [open,setOpen]=useState(false)
+
+const [formData, setFormData] = useState({
+
+  id: "",
+  nume: "",
+  grupa: "",
+});
+
+const [editID, setEditID] = useState()
  const [modalShow, setModalShow] = useState(false);
   const getData = () => {
     var requestOptions = {
@@ -36,10 +45,14 @@ const Copii = () => {
     });
   }
 
+  const handleEdit = (editIDNotState) => {
+    axios.get(`http://localhost:8000/copii/${editIDNotState}`)
+        .then(res => {
+            setFormData(res.data)
 
-  // const openModal = () => {
-  //   setOpen(true);
-  // }
+        })
+        .catch(err => console.log(err))
+};
 
   return (
     <section>
@@ -50,7 +63,7 @@ const Copii = () => {
           Adauga
         </button> */}
       </div>
-      {copii && <CopiiList copii={copii} deleteChild={deleteChild} />}
+      {copii && <CopiiList copii={copii} deleteChild={deleteChild} handleEdit={handleEdit}/>}
       {/* {open === true && <AddChild />} */}
       {/* <div className="modal" id="myModal" >
         <div className="modal-dialog">

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import "bootstrap/dist/css/bootstrap.min.css";
 class Options extends Component {
     render() {
         const { options, selectedOption, onOptionChange } = this.props;
@@ -16,7 +16,7 @@ class Options extends Component {
                             onChange={onOptionChange}
                             className="form-check-input"
                         />
-                        <label className="form-check-label">{option}</label>
+                        <label >{option}</label>
                     </div>
                 ))}
             </div>
