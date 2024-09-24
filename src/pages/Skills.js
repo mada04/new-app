@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import AddClub from "../club/AddClub";
 import { Button } from "react-bootstrap";
+import DeleteIcon from '@mui/icons-material/Delete';
 
 export default function Skills() {
     // const skills = ["Limba engleza", "Dans", "Pictura", "Karate", "Inot","Tenis"]
@@ -14,7 +15,16 @@ export default function Skills() {
             .catch(err => console.log(err))
     }, []);
 
-
+    const deleteClub = (id) => {
+        axios.delete(`http://localhost:8000/cluburi/${id}`).then((response) => {
+          const newClub = cluburi.filter((cl) => cl.id !== id);
+          console.log(response)
+          setCluburi(newClub);
+        }).catch(error => {
+          console.log(error)
+        });
+      }
+    
 
     return (
         <section id="skills"
@@ -30,7 +40,7 @@ export default function Skills() {
                         className="cursor-pointer px-12 py-10 
                                         rounded bg-purple-700  bg-opacity-50 text-lg 
                                         flex items-center justify-center 
-                                        font-bold hover:shadow-xl text-white">{s.nume}
+                                        font-bold hover:shadow-xl text-white">{s.nume}< DeleteIcon style={{ color: "#d46767" }} onClick={() => deleteClub(s.id)} />
                     </div>)
                 })}
             </div>
