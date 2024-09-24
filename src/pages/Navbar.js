@@ -36,6 +36,10 @@ export default function NavbarApp() {
                                       py-2 transition rounded hover:text-white 
                                       hover:bg-purple-500" to="/contact">Contact</Link>
                     </li>
+                    <li><Link className="text-sm sm:text-base px-2 lg:px-5 
+                                      py-2 transition rounded hover:text-white 
+                                      hover:bg-purple-500" to="/taxe">Taxe scolarizare</Link>
+                    </li>
                     {/* <li><Link className="text-sm sm:text-base px-2 lg:px-5 
                                       py-2 transition rounded hover:text-white 
                                       hover:bg-purple-500" to="/todo">Copii</Link>

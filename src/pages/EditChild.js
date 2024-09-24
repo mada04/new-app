@@ -68,7 +68,7 @@ const EditChild=()=>{
           </div><br/>
           <div style={{textAlign:"center"}}>
 
-          <button  class="btn btn-success">Submit</button>
+          <button  class="btn btn-success">Salveaza</button>
           </div>
         </form>
         </div>

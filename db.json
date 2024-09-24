@@ -56,5 +56,51 @@
       "grupa": "Albinute",
       "src": "src/images/Albinute.jpg"
     }
+  ],
+  "taxe": [
+    {
+      "id": "1",
+      "ora": "08.00-09.00",
+      "text": "Sosirea in gradinita"
+    },
+    {
+      "id": "2",
+      "ora": "09.00-09.15",
+      "text": "Mic dejun"
+    },
+    {
+      "id": "3",
+      "ora": "09.15-12.30",
+      "text": "Activitati instructiv educative"
+    },
+    {
+      "id": "4",
+      "ora": "12.30-13.00",
+      "text": "Masa de pranz"
+    }
+  ],
+  "tarife": [
+    {
+      "id": "8",
+      "ora": "08.00-12.00",
+      "text": "Scurt",
+      "taxaF":"2300",
+      "taxaM":"20"
+      
+    },
+    {
+      "id": "9",
+      "ora": "08.00-13.00",
+      "text": "Mediu",
+      "taxaF":"2300",
+      "taxaM":"35"
+    },
+    {
+      "id": "10",
+     "ora": "08.00-18.30",
+      "text": "Lung",
+      "taxaF":"2500",
+      "taxaM":"40"
+    }
   ]
 }

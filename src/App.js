@@ -16,6 +16,7 @@ import EditChild from './pages/EditChild';
 import TestQuiz from './quiz/TestQuiz';
 import NavbarApp from './pages/Navbar';
 import Educatoare from './pages/Educatoare';
+import TaxeScolarizare from './pages/TaxeScolarizare';
 function App() {
   return (
    <>
@@ -40,6 +41,7 @@ function App() {
       <Route path='/editeaza/:id' element={<EditChild/>}/>
       <Route path='/quizApp' element={<TestQuiz/>}/>
       <Route path='/educatoare' element={<Educatoare/>}/>
+      <Route path='/taxe' element={<TaxeScolarizare/>}/>
     </Routes>
     {/* <Footer/> */}
    {/* </Router> */}
