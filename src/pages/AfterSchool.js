@@ -46,11 +46,7 @@ export default function AfterSchool() {
             <section
                 className="px-10 w-full flex flex-col lg:flex-row py-20 
                        align-center bg-blue-600 bg-opacity-25   max-w-5xl mx-auto">
-                {/* <div className="flex-1">
-                    <img src={af}
-                        alt="About"
-                        className="w-full h-full bg-cover" />
-                </div> */}
+       
                 <div className="flex-1 flex flex-col justify-center
                                 items-center gap-5 px-6">
 

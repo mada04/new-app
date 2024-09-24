@@ -3,11 +3,16 @@ import { useEffect, useState } from "react";
 import AccessAlarmIcon from '@mui/icons-material/AccessAlarm';
 import PaymentIcon from '@mui/icons-material/Payment';
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
+import TaxeAdd from "../taxe/TaxeAdd";
+import TarifeAdd from "../taxe/TarifeAdd";
 
 const TaxeScolarizare = () => {
 
     const [taxe, setTaxe] = useState([])
     const [tarife, setTarife] = useState([])
+    const [modalShow, setModalShow] = useState(false);
+    const [modalShowTarfife, setModalShowTarife] = useState(false);
+
     useEffect(() => {
         getTaxe()
         getTarife()
@@ -18,11 +23,13 @@ const TaxeScolarizare = () => {
             .then(res => setTaxe(res.data))
             .catch(err => console.log(err))
     }
+
     const getTarife = () => {
         axios.get('http://localhost:8000/tarife')
             .then(res => setTarife(res.data))
             .catch(err => console.log(err))
     }
+
     return (
         <div style={{ marginTop: "150px", marginLeft: "150px" }}>
             <div className="container">
@@ -31,8 +38,8 @@ const TaxeScolarizare = () => {
                         <thead className="table-secondary">
 
                             <tr>
-                            <th colSpan={2}>Programul zilei</th>
-                            <th style={{textAlign:"end",color:"green"}}><AddCircleOutlineIcon/></th>
+                                <th colSpan={2}>Programul zilei</th>
+                                <th style={{ textAlign: "end", color: "green" }} onClick={() => setModalShow(true)}><AddCircleOutlineIcon /></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -51,14 +58,14 @@ const TaxeScolarizare = () => {
                     <div className="col-sm">  <table className="table table-bordered">
                         <thead className="table-secondary">
                             <tr>
-                            <th colSpan={4}>Tarife</th><th style={{textAlign:"end",color:"green"}}><AddCircleOutlineIcon/></th></tr>
-                            
+                                <th colSpan={4}>Tarife</th><th style={{ textAlign: "end", color: "green" }} onClick={() => setModalShowTarife(true)}><AddCircleOutlineIcon /></th></tr>
+
                         </thead>
                         <tbody>
-                            <tr><td></td>
-                            <td>Orar</td>
-                            <td>Program</td><td>Taxa Fixa</td><td>Taxa Masa</td>
-                            
+                            <tr>
+                                <td colSpan={2}>Orar</td>
+                                <td>Program</td><td>Taxa Fixa</td><td>Taxa Masa</td>
+
                             </tr>
                             {tarife && tarife.map((t, i) => {
                                 return (
@@ -77,8 +84,10 @@ const TaxeScolarizare = () => {
                 </div>
             </div>
 
-
-
+            <TaxeAdd show={modalShow}
+                onHide={() => setModalShow(false)} />
+            <TarifeAdd show={modalShowTarfife}
+                onHide={() => setModalShowTarife(false)} />
         </div>
     )
 

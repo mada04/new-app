@@ -14,12 +14,7 @@ export default function Hero() {
 
                 <p className="text-center text-purple-700 text-opacity-25 tracking-wider">Gradinita noastra ofera sevicii de ingrijire si educare pentru copii cu varsta cuprinsa intre 1,8 ani si 6 ani.</p>
             </div>
-            {/* <div className="flex-1">
-                <img src=
-                    "https://media.geeksforgeeks.org/gfg-gg-logo.svg"
-                    alt="Hello.svg"
-                    className="w-full h-full bg-cover" />
-            </div> */}
+           
         </section>
     )
 }

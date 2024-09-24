@@ -34,9 +34,9 @@ const AddChild = (props) => {
         const isJson = response.headers.get('content-type')?.includes('application/json');
         const data = isJson && await response.json();
 
-        // check for error response
+
         if (!response.ok) {
-          // get error message from body or default to response status
+
           const error = (data && data.message) || response.status;
           return Promise.reject(error);
         }
@@ -44,7 +44,7 @@ const AddChild = (props) => {
         else {
           navigate('/copiiList')
           props.onHide();
-          // this.setState({ postId: data.id })
+
         }
 
       })
@@ -58,9 +58,7 @@ const AddChild = (props) => {
   }
 
 
-  // const goHome = () => {
-  //   navigate('/copiiList')
-  // }
+
 
   return (
     <div >
@@ -90,8 +88,7 @@ const AddChild = (props) => {
             </Form.Group>
             <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
               <Form.Label>Grupa</Form.Label>
-              {/* <Form.Control type="text" placeholder="grupa" value={grupa}
-                onChange={(e) => setGrupa(e.target.value)} /> */}
+
               <Form.Select aria-label="Default select example" onChange={(e) => setGrupa(e.target.value)}>
                 <option>Alegeti grupa</option>
                 <option value="Albinute">Albinute</option>

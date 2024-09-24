@@ -4,7 +4,7 @@ import './App.css';
 import Hero from './pages/Hero';
 import About from './pages/About';
 import Skills from './pages/Skills';
-import Projects from './pages/Projects';
+
 import Contact from './pages/Contact';
 import Footer from './pages/Footer';
 import AfterSchool from './pages/AfterSchool';
@@ -21,15 +21,7 @@ function App() {
   return (
    <>
    <NavbarApp/>
-   {/* <Hero/>
-   <About/>
-   <Skills/>
-   <AfterSchool/>
-   <Contact/>
-   <Footer/> */}
-   {/* <Projects/> */}
 
-   {/* <Router> */}
     <Routes>
       <Route exact path='/' element={<About/>}/>
       <Route path='/skills' element={<Skills/>}/>
@@ -43,8 +35,7 @@ function App() {
       <Route path='/educatoare' element={<Educatoare/>}/>
       <Route path='/taxe' element={<TaxeScolarizare/>}/>
     </Routes>
-    {/* <Footer/> */}
-   {/* </Router> */}
+
    </>
   );
 }

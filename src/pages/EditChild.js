@@ -54,10 +54,6 @@ const EditChild=()=>{
           </div>
           <div className="form-group">
             <label>Grupa</label>
-            {/* <input type='text'
-            value={inputData.grupa}
-                 name='grupa'
-            onChange={e=>setInputData({...inputData,grupa:e.target.value})}/> */}
               <select  value={inputData.grupa} onChange={e=>setInputData({...inputData,grupa:e.target.value})}>
                 <option>Alegeti grupa</option>
                 <option value="Albinute">Albinute</option>

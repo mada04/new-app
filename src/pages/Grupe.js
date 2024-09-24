@@ -6,7 +6,7 @@ import Omida from '../images/Omida.jpg'
 import Fluturasi from '../images/fluturas.png'
 
 export default function Grupe() {
-    // const grupe=["omidute","buburuzelor","albinutelor","fluturasilor"]
+
     const grupe = [{ nume: "omidute", text: "Noi suntem Omidutele Smiley ,cei mai mici din gradinita si incetul cu incetul descoperim ce frumos este la gradinita.Alaturi de copii si educatoare ne simtim confortabil jucandu-ne unii langa altii sau impreuna. In fiecare zi jocul , muzica si miscarea ne insotesc si ne ajuta in acomodarea treptata si prietenoasa in colectivul de copii, fiecare in ritmul propriu de adaptare si integrare.",src:Omida },
     { nume: "buburuzelor", text: "Noi suntem Buburuzele vesele" ,src:Bubu },
     { nume: "albinutelor", text: "Noi suntem Albinutele vesele",src:Albinute },

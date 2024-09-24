@@ -8,30 +8,18 @@ import { Button } from 'react-bootstrap';
 
 const Copii = () => {
   const [copii, setCopii] = useState([]);
-//  const [open,setOpen]=useState(false)
 
 
 
 
- const [modalShow, setModalShow] = useState(false);
-  const getData = () => {
-    // var requestOptions = {
-    //   method: "GET",
-    //   redirect: "follow",
-    // };
 
-    // fetch("http://localhost:8000/copii", requestOptions)
-    //   .then((response) => response.json())
-    //   .then((result) => setCopii(result))
-    //   .catch((error) => console.log("error", error));
+  const [modalShow, setModalShow] = useState(false);
 
-    // axios.get()
-  };
 
   useEffect(() => {
     axios.get('http://localhost:8000/copii')
-    .then(res=>setCopii(res.data))
-    .catch(err=>console.log(err))
+      .then(res => setCopii(res.data))
+      .catch(err => console.log(err))
   }, []);
 
   const deleteChild = (id) => {
@@ -44,44 +32,20 @@ const Copii = () => {
     });
   }
 
-//   const handleEdit = (editIDNotState) => {
-//     axios.get(`http://localhost:8000/copii/${editIDNotState}`)
-//         .then(res => {
-//             setFormData(res.data)
 
-//         })
-//         .catch(err => console.log(err))
-// };
 
   return (
     <section>
       <div style={{ marginTop: "100px", textAlign: "end" }}>
-      <Button variant="primary" style={{width:"100px"}} onClick={() => setModalShow(true)}>Adauga</Button>
-        {/* <button type="button" className="btn btn-primary" style={{ width: "85px" }}  onClick={openModal}>Adauga</button> */}
-        {/* <button >
-          Adauga
-        </button> */}
+        <Button variant="primary" style={{ width: "100px" }} onClick={() => setModalShow(true)}>Adauga</Button>
+
       </div>
-      {copii && <CopiiList copii={copii} deleteChild={deleteChild}/>}
-      {/* {open === true && <AddChild />} */}
-      {/* <div className="modal" id="myModal" >
-        <div className="modal-dialog">
-          <div className="modal-content">
-            <div className="modal-header">
-              <h5 className="modal-title">Adauga copil</h5>
-              <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div className="modal-body">
-              <AddChild />
-            </div>
-         
-          </div>
-        </div>
-      </div> */}
-       
-       <AddChild   show={modalShow}
-        onHide={() => setModalShow(false)}/>
-{/* {open===true &&<AddChild/>} */}
+      {copii && <CopiiList copii={copii} deleteChild={deleteChild} />}
+
+
+      <AddChild show={modalShow}
+        onHide={() => setModalShow(false)} />
+
     </section>
   );
 };

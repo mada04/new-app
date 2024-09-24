@@ -38,29 +38,7 @@ const EducatoareList = ({ educ }) => {
             className="px-10 w-full flex gap-12 
         justify-center items-center align-center mt-40 
         mb-16 lg:mt-10 max-w-5xl mx-auto lg:gap-0 py-20">
-            {/* <table className="table table-hover">
-                <thead className="thead-light">
-                    <tr>
-                        <th scope="col"></th>
-                        <th scope="col">Nume</th>
-                        <th scope="col">Grupa</th>
-                 
-
-                    </tr>
-                </thead>
-                <tbody>
-                    {educ && educ.map((e, i) => {
-                        return (
-                            <tr key={i}>
-                            <th scope="col"></th>
-                                <td>{e.nume}</td>
-                                <td>{e.grupa}</td>
-                              
-                            </tr>
-                        )
-                    })}
-                </tbody>
-            </table> */}
+          
 
 <div className='container'>
 <div className="row">
