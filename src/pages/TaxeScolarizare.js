@@ -5,6 +5,7 @@ import PaymentIcon from '@mui/icons-material/Payment';
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 import TaxeAdd from "../taxe/TaxeAdd";
 import TarifeAdd from "../taxe/TarifeAdd";
+import MeniuSaptamanal from "../taxe/MeniuSaptamanal";
 
 const TaxeScolarizare = () => {
 
@@ -34,28 +35,30 @@ const TaxeScolarizare = () => {
         <div style={{ marginTop: "150px", marginLeft: "150px" }}>
             <div className="container">
                 <div className="row">
-                    <div className="col-sm"> <table className="table table-bordered">
-                        <thead className="table-secondary">
+                    <div className="col-sm">
+                        <table className="table table-bordered table-hover">
+                            <thead className="table-secondary">
 
-                            <tr>
-                                <th colSpan={2}>Programul zilei</th>
-                                <th style={{ textAlign: "end", color: "green" }} onClick={() => setModalShow(true)}><AddCircleOutlineIcon /></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {taxe && taxe.map((t, i) => {
-                                return (
-                                    <tr key={i}>
-                                        <td style={{ color: "aqua" }}><AccessAlarmIcon /></td>
-                                        <td>{t.ora}</td>
-                                        <td>{t.text}</td>
+                                <tr>
+                                    <th colSpan={2}>Programul zilei</th>
+                                    <th style={{ textAlign: "end", color: "green" }} onClick={() => setModalShow(true)}><AddCircleOutlineIcon /></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {taxe && taxe.map((t, i) => {
+                                    return (
+                                        <tr key={i}>
+                                            <td style={{ color: "aqua" }}><AccessAlarmIcon /></td>
+                                            <td>{t.ora}</td>
+                                            <td>{t.text}</td>
 
-                                    </tr>
-                                )
-                            })}
-                        </tbody>
-                    </table></div>
-                    <div className="col-sm">  <table className="table table-bordered">
+                                        </tr>
+                                    )
+                                })}
+                            </tbody>
+                        </table>
+                    </div>
+                    <div className="col-sm">  <table className="table table-bordered table-hover">
                         <thead className="table-secondary">
                             <tr>
                                 <th colSpan={4}>Tarife</th><th style={{ textAlign: "end", color: "green" }} onClick={() => setModalShowTarife(true)}><AddCircleOutlineIcon /></th></tr>
@@ -83,7 +86,7 @@ const TaxeScolarizare = () => {
                     </table></div>
                 </div>
             </div>
-
+            <MeniuSaptamanal />
             <TaxeAdd show={modalShow}
                 onHide={() => setModalShow(false)} />
             <TarifeAdd show={modalShowTarfife}

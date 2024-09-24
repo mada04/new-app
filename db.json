@@ -143,5 +143,13 @@
       "id": "53",
       "nume": "Tennis"
     }
+  ],
+  "meniu":[
+   {"zi":"luni","micdejun":"Lapte","pranz":"ciorba","desert":"orez cu lapte"},
+    { "zi":"marti","micdejun":"Ceai","pranz":"orez","desert":"Piersica"},
+    {"zi":"miercuri","micdejun":"Lapte cu cereale","pranz":"smantana cu pui","desert":"caisa"},
+    {"zi":"joi","micdejun":"Ceai cu fructe","pranz":"cartofi cu carne de curcan","desert":"banana"},
+    { "zi":"vineri","micdejun":"Omleta","pranz":"ostropel","desert":"chec"}
+  
   ]
 }

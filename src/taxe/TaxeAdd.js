@@ -74,7 +74,7 @@ const TaxeAdd = (props) => {
             >
                 <Modal.Header closeButton>
                     <Modal.Title id="contained-modal-title-vcenter">
-                        Adauga
+                        Adauga o activitate noua
                     </Modal.Title>
                 </Modal.Header>
                 <Modal.Body>

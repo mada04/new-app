@@ -7,10 +7,10 @@ function ToDoList() {
 
     const [text, setText] = useState("")
     const [lista, setLista] = useState([])
- useEffect(() => {
+    useEffect(() => {
 
-  }, [lista]);
-  // ...
+    }, [lista]);
+    // ...
 
 
     const updateText = (value) => {
@@ -35,24 +35,23 @@ function ToDoList() {
     const deleteElement = (key) => {
         const list = [...lista];
         const updateList = list.filter((item) => item.id !== key)
-       
+
         setLista(updateList)
     }
 
-    const editItem=(index)=>{
-        console.log("index",index)
-        const todos=[...lista];
-        const editedTodo=prompt('Editezi textul:');
-        if(editedTodo!==null && editedTodo.trim()!==''){
-            // console.log("editedTodo",editedTodo)
-            const updateTodos=[...todos]
-            updateTodos.index=editedTodo
-            // console.log("upt",updateTodos)
+    const editItem = (index) => {
+        console.log("index", index)
+        const todos = [...lista];
+        const editedTodo = prompt('Editezi textul:');
+        if (editedTodo !== null && editedTodo.trim() !== '') {
+
+            const updateTodos = [...todos]
+            updateTodos.index = editedTodo
+
             setLista(updateTodos)
         }
     }
 
-    console.log("list",lista)
     return (
         <section id="todo" className="px-10 w-full flex gap-12 flex-col lg:flex-row 
         justify-center items-center align-center mt-40 
@@ -80,11 +79,8 @@ function ToDoList() {
                 </div>
                 <div className="flex-1 flex flex-col justify-center
                                 items-center gap-5 ">
-                    {/* <button type="submit"
-                        value="Submit"
-                        style={{ width: "100px", padding: "5px" }}
-                        onClick={addItem}>Adauga</button> */}
-                        <AddCircleOutlineIcon onClick={addItem}/>
+
+                    <AddCircleOutlineIcon onClick={addItem} />
                 </div>
 
                 <ul className='list-disc  flex-1 flex flex-col justify-center
@@ -93,7 +89,7 @@ function ToDoList() {
                         return (
                             <li key={el["id"]} >{el["value"]}
                                 < DeleteIcon onClick={() => deleteElement(el["id"])} />
-                                <EditIcon onClick={()=>editItem(el.value)}/>
+                                <EditIcon onClick={() => editItem(el.value)} />
                             </li>
                         )
                     })}

@@ -31,32 +31,32 @@ const EducatoareList = ({ educ }) => {
 
 
     }
-  
-    
+
+
     return (
         <section id="listaCopii"
             className="px-10 w-full flex gap-12 
         justify-center items-center align-center mt-40 
         mb-16 lg:mt-10 max-w-5xl mx-auto lg:gap-0 py-20">
-          
 
-<div className='container'>
-<div className="row">
-{lista && lista.map((e, i) => {
-                return (
-                    <div  style={{ width: "18rem" }} className="card col-sm-3" key={i}>
-                        <img class="card-img-top" src={e.src} alt="Card image cap" />
-                        <div class="card-body">
-                            <h5 class="card-title">{e.nume}</h5>
-                            <p class="card-text">{e.grupa}</p>
 
-                        </div>
-                    </div>
-                )
-            })}
-  </div>
-</div>
-           
+            <div className='container'>
+                <div className="row">
+                    {lista && lista.map((e, i) => {
+                        return (
+                            <div style={{ width: "18rem" }} className="card col-sm-3" key={i}>
+                                <img class="card-img-top" src={e.src} alt="Card image cap" />
+                                <div class="card-body">
+                                    <h5 class="card-title">{e.nume}</h5>
+                                    <p class="card-text">{e.grupa}</p>
+
+                                </div>
+                            </div>
+                        )
+                    })}
+                </div>
+            </div>
+
         </section>
     )
 }

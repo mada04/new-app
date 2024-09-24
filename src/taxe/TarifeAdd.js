@@ -78,7 +78,7 @@ const TarifeAdd = (props) => {
             >
                 <Modal.Header closeButton>
                     <Modal.Title id="contained-modal-title-vcenter">
-                        Adauga
+                        Adauga un tarif zilnic
                     </Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
