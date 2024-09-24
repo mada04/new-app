@@ -7,13 +7,13 @@
     },
     {
       "id": "5",
-      "nume": "Vlad",
-      "grupa": "Fluturasi"
+      "nume": "Ioan",
+      "grupa": "Omidute"
     },
     {
       "id": "7",
-      "nume": "Sonia",
-      "grupa": "Fluturasi"
+      "nume": "Marga",
+      "grupa": "Albinute"
     },
     {
       "id": "8",
@@ -24,6 +24,37 @@
       "id": "e56b",
       "nume": "Vlad",
       "grupa": "Fluturasi"
+    },
+    {
+      "id": "2569",
+      "nume": "Maria",
+      "grupa": "Fluturasi"
+    }
+  ],
+  "educatoare": [
+    {
+      "id": "4",
+      "nume": "Alexandra",
+      "grupa": "Fluturasi",
+      "src": "../images/Albinute.jpg"
+    },
+    {
+      "id": "5",
+      "nume": "Iulia",
+      "grupa": "Buburuze",
+      "src": "../images/Albinute.jpg"
+    },
+    {
+      "id": "7",
+      "nume": "Sonia",
+      "grupa": "Omidute",
+      "src": "../images/Albinute.jpg"
+    },
+    {
+      "id": "8",
+      "nume": "Niculina",
+      "grupa": "Albinute",
+      "src": "src/images/Albinute.jpg"
     }
   ]
 }

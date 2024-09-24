@@ -11,7 +11,7 @@ export default function Skills() {
                 {skills && skills.map((s, i) => {
                     return (<div key={i}
                         className="cursor-pointer px-12 py-10 
-                                        rounded bg-purple-500  bg-opacity-30 text-lg 
+                                        rounded bg-purple-700  bg-opacity-50 text-lg 
                                         flex items-center justify-center 
                                         font-bold hover:shadow-xl text-white">{s}
                     </div>)

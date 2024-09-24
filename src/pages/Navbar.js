@@ -11,12 +11,12 @@ export default function NavbarApp() {
                 <h3 className="text-3xl text-purple-700 text-opacity-50 font-bold">Kindergarten</h3>
                 <ul className="flex gap-3 align-center p-1 flex-wrap">
                     <li>
-                      <Link className="text-sm sm:text-base px-2 lg:px-5 
+                        <Link className="text-sm sm:text-base px-2 lg:px-5 
                                       py-2 transition rounded hover:text-white 
                                       hover:bg-purple-500" to="/">Despre </Link>
                     </li>
                     <li>
-                                       <Link className="text-sm sm:text-base px-2 lg:px-5 
+                        <Link className="text-sm sm:text-base px-2 lg:px-5 
                                       py-2 transition rounded hover:text-white 
                                       hover:bg-purple-500" to="/skills">Cluburi copii </Link>
                     </li>
@@ -28,10 +28,10 @@ export default function NavbarApp() {
                                       py-2 transition rounded hover:text-white 
                                       hover:bg-purple-500" href="#projects">Projects</a>
                     </li> */}
-                    <li><Link className="text-sm sm:text-base px-2 lg:px-5 
+                    {/* <li><Link className="text-sm sm:text-base px-2 lg:px-5 
                                       py-2 transition rounded hover:text-white 
                                       hover:bg-purple-500" to="/grupe">Grupe</Link>
-                    </li>
+                    </li> */}
                     <li><Link className="text-sm sm:text-base px-2 lg:px-5 
                                       py-2 transition rounded hover:text-white 
                                       hover:bg-purple-500" to="/contact">Contact</Link>
@@ -44,14 +44,19 @@ export default function NavbarApp() {
                                       py-2 transition rounded hover:text-white 
                                       hover:bg-purple-500" to="/copiiList">Lista Copii</Link>
                     </li>
-                    <li><Link className="text-sm sm:text-base px-2 lg:px-5 
+                    {/* <li><Link className="text-sm sm:text-base px-2 lg:px-5 
                                       py-2 transition rounded hover:text-white 
                                       hover:bg-purple-500" to="/quizApp">Test quiz</Link>
+                    </li> */}
+                    <li>
+                        <Link className="text-sm sm:text-base px-2 lg:px-5 
+                                      py-2 transition rounded hover:text-white 
+                                      hover:bg-purple-500" to="/educatoare">Educatoare</Link>
                     </li>
                 </ul>
 
             </div>
         </nav>
-      
+
     )
 }

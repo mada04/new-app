@@ -16,6 +16,7 @@ export default function Grupe() {
     const ocClick=(gr)=>{
         console.log("e",gr)
     }
+    
     return (
         <section id="grupe" >
 

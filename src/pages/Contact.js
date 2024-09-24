@@ -136,7 +136,7 @@ function Contact() {
                             setGender(e.target.value)
                         }
                     />
-                    Faminim
+                    Feminim
                     <input
                         type="radio"
                         name="gender"

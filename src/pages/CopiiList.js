@@ -3,15 +3,18 @@ import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
 import { useState } from 'react';
 import EditChild from './EditChild';
+import { Link } from 'react-router-dom';
+
 
 const CopiiList = ({ copii, deleteChild }) => {
-    const [openE, setOpenE] = useState(false)
+  
     const [child, setChild] = useState()
-    
+    const [modalShow,setModalShow]=useState(false)
+
     const openEdit = (el) => {
-        console.log("el", el)
-        setOpenE(true)
+        // console.log("el", el)
         setChild(el)
+        setModalShow(true)
     }
     return (
         <section id="listaCopii"
@@ -36,17 +39,21 @@ const CopiiList = ({ copii, deleteChild }) => {
                                 <td>  <ChildCareIcon style={{ color: "#5959c7" }} /></td>
                                 <td>{c.nume}</td>
                                 <td>{c.grupa}</td>
-                                <td><EditIcon style={{ color: "#1ebf8f" }} onClick={() => {
+                                <td>
+                                    {/* <EditIcon style={{ color: "#1ebf8f" }} onClick={() => {
                                     openEdit(c)
                                     // setEditID(c.id)
-                                }} /></td>
+                                }} /> */}
+                                <Link to={`/editeaza/${c.id}`}><EditIcon style={{ color: "#1ebf8f" }}/></Link>
+                                </td>
                                 <td>< DeleteIcon style={{ color: "#d46767" }} onClick={() => deleteChild(c.id)} /></td>
                             </tr>
                         )
                     })}
                 </tbody>
             </table>
-            {openE === true && <EditChild child={child} />}
+       {/* <EditChild child={child} show={modalShow}
+        onHide={() => setModalShow(false)}/> */}
         </section>
     )
 }

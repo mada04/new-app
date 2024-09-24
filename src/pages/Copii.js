@@ -10,29 +10,28 @@ const Copii = () => {
   const [copii, setCopii] = useState([]);
 //  const [open,setOpen]=useState(false)
 
-const [formData, setFormData] = useState({
 
-  id: "",
-  nume: "",
-  grupa: "",
-});
 
-const [editID, setEditID] = useState()
+
  const [modalShow, setModalShow] = useState(false);
   const getData = () => {
-    var requestOptions = {
-      method: "GET",
-      redirect: "follow",
-    };
+    // var requestOptions = {
+    //   method: "GET",
+    //   redirect: "follow",
+    // };
 
-    fetch("http://localhost:8000/copii", requestOptions)
-      .then((response) => response.json())
-      .then((result) => setCopii(result))
-      .catch((error) => console.log("error", error));
+    // fetch("http://localhost:8000/copii", requestOptions)
+    //   .then((response) => response.json())
+    //   .then((result) => setCopii(result))
+    //   .catch((error) => console.log("error", error));
+
+    // axios.get()
   };
 
   useEffect(() => {
-    getData();
+    axios.get('http://localhost:8000/copii')
+    .then(res=>setCopii(res.data))
+    .catch(err=>console.log(err))
   }, []);
 
   const deleteChild = (id) => {
@@ -45,14 +44,14 @@ const [editID, setEditID] = useState()
     });
   }
 
-  const handleEdit = (editIDNotState) => {
-    axios.get(`http://localhost:8000/copii/${editIDNotState}`)
-        .then(res => {
-            setFormData(res.data)
+//   const handleEdit = (editIDNotState) => {
+//     axios.get(`http://localhost:8000/copii/${editIDNotState}`)
+//         .then(res => {
+//             setFormData(res.data)
 
-        })
-        .catch(err => console.log(err))
-};
+//         })
+//         .catch(err => console.log(err))
+// };
 
   return (
     <section>
@@ -63,7 +62,7 @@ const [editID, setEditID] = useState()
           Adauga
         </button> */}
       </div>
-      {copii && <CopiiList copii={copii} deleteChild={deleteChild} handleEdit={handleEdit}/>}
+      {copii && <CopiiList copii={copii} deleteChild={deleteChild}/>}
       {/* {open === true && <AddChild />} */}
       {/* <div className="modal" id="myModal" >
         <div className="modal-dialog">

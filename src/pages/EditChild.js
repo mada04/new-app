@@ -1,65 +1,81 @@
 
 
-import { useEffect, useState } from 'react';
-import CopiiList from './CopiiList';
 import axios from 'axios';
-import AddChild from './AddChild';
-import { Button } from 'react-bootstrap';
+import { useEffect, useState } from 'react';
+import { Button, Form, Modal } from 'react-bootstrap';
+import { useNavigate, useParams } from 'react-router-dom';
 
-const EditChild = (props) => {
-  const [copii, setCopii] = useState([]);
-//  const [open,setOpen]=useState(false)
-console.log("child",props)
-const [formData, setFormData] = useState({
+const EditChild=()=>{
+  const {id}=useParams();
+  const [inputData,setInputData]=useState({
+    id:id,
+    nume:"",
+    grupa:"",
+  })
 
-  id: "",
-  nume: "",
-  grupa: ""
-});
-
-// useEffect(()=>{
-// const dt={
-//     id:props["child"].id,
-//     nume:props["child"].nume,
-//     grupa: props["child"].grupa
-// }
-// setFormData(dt)
-// })
-// const [editID, setEditID] = useState()
-//  const [modalShow, setModalShow] = useState(false);
-//   const getData = () => {
-//     var requestOptions = {
-//       method: "GET",
-//       redirect: "follow",
-//     };
-
-//     fetch("http://localhost:8000/copii", requestOptions)
-//       .then((response) => response.json())
-//       .then((result) => setCopii(result))
-//       .catch((error) => console.log("error", error));
-//   };
-
-//   useEffect(() => {
-//     getData();
-//   }, []);
+  const navigate=useNavigate();
+  useEffect(()=>{
+    axios.get('http://localhost:8000/copii/'+id)
+    .then(res=>setInputData(res.data))
+    .catch(err=>console.log())
+  },[])
 
 
+  const handleSubmit=(ev)=>{
+    ev.preventDefault();
+    axios.put('http://localhost:8000/copii/'+id,inputData)
+    .then(res=>{
+      alert("Modificare cu succes")
+      navigate('/copiiList')
+    })
+  }
+  return(
+   
 
-//   const handleEdit = (editIDNotState) => {
-//     axios.get(`http://localhost:8000/copii/${editIDNotState}`)
-//         .then(res => {
-//             setFormData(res.data)
+    
+      <div className='d-flex w-100 vh-100 justify-content-center align-items-center'>
+        
+        <div className='w-50 border bg-info  p-5'>
+        <form onSubmit={handleSubmit}>
+        <div className="form-group">
+            <label>Id</label>
+            <input type='text'
+            disabled
+            name='id'
+            value={inputData.id}
+           />
+          </div>
+          <div className="form-group">
+            <label>Nume</label>
+            <input type='text'
+            value={inputData.nume}
+                 name='nume'
+            onChange={e=>setInputData({...inputData,nume:e.target.value})}/>
+          </div>
+          <div className="form-group">
+            <label>Grupa</label>
+            {/* <input type='text'
+            value={inputData.grupa}
+                 name='grupa'
+            onChange={e=>setInputData({...inputData,grupa:e.target.value})}/> */}
+              <select  value={inputData.grupa} onChange={e=>setInputData({...inputData,grupa:e.target.value})}>
+                <option>Alegeti grupa</option>
+                <option value="Albinute">Albinute</option>
+                <option value="Omidute">Omidute</option>
+                <option value="Fluturasi">Fluturasi</option>
+                <option value="Buburuze">Buburuze</option>
+              </select>
+          </div><br/>
+          <div style={{textAlign:"center"}}>
 
-//         })
-//         .catch(err => console.log(err))
-// };
-
-  return (
-    <section>
-    <p>sunt</p>
-    </section>
-  );
-};
-
+          <button  class="btn btn-success">Submit</button>
+          </div>
+        </form>
+        </div>
+       
+      </div>
+   
+  
+  )
+}
 export default EditChild;
-
