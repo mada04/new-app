@@ -8,7 +8,7 @@ export default function NavbarApp() {
             <div className="container flex flex-col lg:flex-row
                             gap-7 justify-between w-full 
                             items-center max-w-5xl mx-auto">
-                <h3 className="text-3xl text-purple-700 text-opacity-50 font-bold">Kindergarten</h3>
+                <h3 className="text-3xl text-purple-700 text-opacity-50 font-bold">My Kindergarten</h3>
                 <ul className="flex gap-3 align-center p-1 flex-wrap">
                     <li>
                         <Link className="text-sm sm:text-base px-2 lg:px-5 

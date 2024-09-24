@@ -125,5 +125,27 @@
       "taxaF": "700",
       "taxaM": "7"
     }
+  ],
+  "cluburi": [
+    {
+      "id": "49",
+      "nume": "Engleza"
+    },
+    {
+      "id": "50",
+      "nume": "Innot"
+    },
+    {
+      "id": "52",
+      "nume": "Karate"
+    },
+    {
+      "id": "53",
+      "nume": "Tennis"
+    },
+    {
+      "id": "2d6a",
+      "nume": "Matematica"
+    }
   ]
 }
