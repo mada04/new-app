@@ -17,6 +17,9 @@ import TestQuiz from './quiz/TestQuiz';
 import NavbarApp from './pages/Navbar';
 import Educatoare from './pages/Educatoare';
 import TaxeScolarizare from './pages/TaxeScolarizare';
+import EditMeniu from './taxe/EditMeniu';
+import EditProgramZilei from './taxe/EditProgramZilei';
+import EditTarife from './taxe/EditTarife';
 function App() {
   return (
    <>
@@ -31,6 +34,9 @@ function App() {
       {/* <Route path='/todo' element={<ToDoList/>}/> */}
       <Route path='/copiiList' element={<Copii/>}/>
       <Route path='/editeaza/:id' element={<EditChild/>}/>
+      <Route path='/editMeniu/:id' element={<EditMeniu/>}/>
+      <Route path='/editProgram/:id' element={<EditProgramZilei/>}/>
+      <Route path='/editTarife/:id' element={<EditTarife/>}/>
       <Route path='/quizApp' element={<TestQuiz/>}/>
       <Route path='/educatoare' element={<Educatoare/>}/>
       <Route path='/taxe' element={<TaxeScolarizare/>}/>

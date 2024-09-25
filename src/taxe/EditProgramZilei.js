@@ -2,20 +2,20 @@
 
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import { Button, Form, Modal } from 'react-bootstrap';
 import { useNavigate, useParams } from 'react-router-dom';
 
-const EditChild=()=>{
+const EditProgramZilei=()=>{
   const {id}=useParams();
   const [inputData,setInputData]=useState({
     id:id,
-    nume:"",
-    grupa:"",
+    ora:"",
+    text:""
   })
 
   const navigate=useNavigate();
+
   useEffect(()=>{
-    axios.get('http://localhost:8000/copii/'+id)
+    axios.get('http://localhost:8000/taxe/'+id)
     .then(res=>setInputData(res.data))
     .catch(err=>console.log())
   },[])
@@ -23,10 +23,10 @@ const EditChild=()=>{
 
   const handleSubmit=(ev)=>{
     ev.preventDefault();
-    axios.put('http://localhost:8000/copii/'+id,inputData)
+    axios.put('http://localhost:8000/taxe/'+id,inputData)
     .then(res=>{
       alert("Modificare cu succes")
-      navigate('/copiiList')
+      navigate('/taxe')
     })
   }
   return(
@@ -46,22 +46,24 @@ const EditChild=()=>{
            />
           </div>
           <div className="form-group">
-            <label>Nume</label>
+            <label>Ora</label>
             <input type='text'
-            value={inputData.nume}
-                 name='nume'
-            onChange={e=>setInputData({...inputData,nume:e.target.value})}/>
+           
+            value={inputData.ora}
+                 name='ora'
+                 onChange={e=>setInputData({...inputData,ora:e.target.value})}
+           />
           </div>
           <div className="form-group">
-            <label>Grupa</label>
-              <select  value={inputData.grupa} onChange={e=>setInputData({...inputData,grupa:e.target.value})}>
-                <option>Alegeti grupa</option>
-                <option value="Albinute">Albinute</option>
-                <option value="Omidute">Omidute</option>
-                <option value="Fluturasi">Fluturasi</option>
-                <option value="Buburuze">Buburuze</option>
-              </select>
-          </div><br/>
+            <label>Activitate</label>
+            <input type='text'
+          
+            value={inputData.text}
+                 name='text'
+            onChange={e=>setInputData({...inputData,text:e.target.value})}/>
+          </div>
+          
+          <br/>
           <div style={{textAlign:"center"}}>
 
           <button  class="btn btn-success">Salveaza</button>
@@ -74,4 +76,4 @@ const EditChild=()=>{
   
   )
 }
-export default EditChild;
+export default EditProgramZilei;

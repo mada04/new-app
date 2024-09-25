@@ -59,11 +59,6 @@
   ],
   "taxe": [
     {
-      "id": "1",
-      "ora": "08.00-09.00",
-      "text": "Sosirea in gradinita"
-    },
-    {
       "id": "2",
       "ora": "09.00-09.15",
       "text": "Mic dejun"
@@ -74,17 +69,7 @@
       "text": "Activitati instructiv educative"
     },
     {
-      "id": "4",
-      "ora": "12.30-13.00",
-      "text": "Masa de pranz"
-    },
-    {
       "id": "69b4",
-      "ora": "14.00-15.00",
-      "text": "Masa"
-    },
-    {
-      "id": "4e32",
       "ora": "14.00-15.00",
       "text": "Masa"
     }
@@ -92,17 +77,10 @@
   "tarife": [
     {
       "id": "8",
-      "ora": "08.00-12.00",
+      "ora": "07.00-10.00",
       "text": "Scurt",
-      "taxaF": "2300",
-      "taxaM": "20"
-    },
-    {
-      "id": "9",
-      "ora": "08.00-13.00",
-      "text": "Mediu",
-      "taxaF": "2300",
-      "taxaM": "35"
+      "taxaF": "1500",
+      "taxaM": "10"
     },
     {
       "id": "10",
@@ -110,13 +88,6 @@
       "text": "Lung",
       "taxaF": "2500",
       "taxaM": "40"
-    },
-    {
-      "id": "51db",
-      "ora": "10.00-12.00",
-      "text": "scurt",
-      "taxaF": "1500",
-      "taxaM": "15"
     },
     {
       "id": "60b8",
@@ -144,12 +115,41 @@
       "nume": "Tennis"
     }
   ],
-  "meniu":[
-   {"zi":"luni","micdejun":"Lapte","pranz":"ciorba","desert":"orez cu lapte"},
-    { "zi":"marti","micdejun":"Ceai","pranz":"orez","desert":"Piersica"},
-    {"zi":"miercuri","micdejun":"Lapte cu cereale","pranz":"smantana cu pui","desert":"caisa"},
-    {"zi":"joi","micdejun":"Ceai cu fructe","pranz":"cartofi cu carne de curcan","desert":"banana"},
-    { "zi":"vineri","micdejun":"Omleta","pranz":"ostropel","desert":"chec"}
-  
+  "meniu": [
+    {
+      "id": "23",
+      "zi": "Luni",
+      "micdejun": "Lapte",
+      "pranz": "Ciorba",
+      "desert": "Orez cu lapte"
+    },
+    {
+      "id": "24",
+      "zi": "Marti",
+      "micdejun": "Lapte",
+      "pranz": "Mazare",
+      "desert": "Biscuite"
+    },
+    {
+      "id": "25",
+      "zi": "Miercuri",
+      "micdejun": "Lapte cu cereale",
+      "pranz": "Smantana cu pui",
+      "desert": "Caisa"
+    },
+    {
+      "id": "26",
+      "zi": "Joi",
+      "micdejun": "Ceai cu fructe",
+      "pranz": "Cartofi cu carne de curcan",
+      "desert": "Banana"
+    },
+    {
+      "id": "27",
+      "zi": "Vineri",
+      "micdejun": "Omleta",
+      "pranz": "Ostropel",
+      "desert": "Chec"
+    }
   ]
 }
